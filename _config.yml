@@ -35,7 +35,8 @@ plugins:
 
 # timezone: Asia/Shanghai
 
+permalink: /blog/:year/:month/:day/:title/
+
 collections:
   - publications
-  - news
   - showcase
