@@ -5,7 +5,7 @@ selected:       false
 pub:            "Cryptology ePrint Archive"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">'
+# pub_last:       ' <span class="badge badge-pill badge-publication badge-success">'
 pub_date:       "2025"
 semantic_scholar_id: 4bdad784e053ac19ef832627bf6ecc21f01c3947  # use this to retrieve citation count
 abstract: >-
