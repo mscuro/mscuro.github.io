@@ -1,7 +1,7 @@
 ---
 title:          "Public Key Accumulators for Revocation of Non-Anonymous Credentials"
-# date:           2025-06-01 00:01:00 +0800
-selected:       true
+date:           2025-06-01 00:01:00 +0800
+selected:       false
 pub:            "Cryptology ePrint Archive"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
