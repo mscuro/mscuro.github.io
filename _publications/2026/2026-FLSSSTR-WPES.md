@@ -1,7 +1,7 @@
 ---
 title:          "Comparing Privacy-Preserving Revocation for the EUDI Wallet"
 date:           2026-11-14 00:01:00 +0800
-selected:       false
+selected:       true
 pub:            "ACM CCS - WPES"
 pub_pre:        "Cryptology ePrint Archive"
 pub_date:       "2026"

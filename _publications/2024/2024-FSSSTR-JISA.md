@@ -1,7 +1,7 @@
 ---
 title:          "On cryptographic mechanisms for the selective disclosure of verifiable credentials"
 date:           2024-06-01 00:01:00 +0800
-selected:       true
+selected:       false
 pub:            "Journal of Information Security and Applications"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
