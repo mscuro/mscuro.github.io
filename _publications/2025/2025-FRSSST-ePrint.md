@@ -19,5 +19,5 @@ authors:
   - Nicola Smaniotto
 links:
   # Code: https://github.com/aleph-fbk/selective-disclosure-benchmark
-  Paper: https://eprint.iacr.org/2025/549.pdf
+  ePrint: https://eprint.iacr.org/2025/549.pdf
 ---

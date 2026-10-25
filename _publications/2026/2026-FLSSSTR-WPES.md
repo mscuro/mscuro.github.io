@@ -3,7 +3,7 @@ title:          "Comparing Privacy-Preserving Revocation for the EUDI Wallet"
 date:           2026-11-14 00:01:00 +0800
 selected:       true
 pub:            "ACM CCS - WPES"
-pub_pre:        "Cryptology ePrint Archive"
+# pub_pre:        "Cryptology ePrint Archive"
 pub_date:       "2026"
 semantic_scholar_id: e8f0e51a872d820b833bcaaf3def6a6f3dbd3dcc
 abstract: >-
@@ -19,5 +19,6 @@ authors:
   - Silvio Ranise
 links:
   Code: https://github.com/aleph-fbk/anonymous-revocation-benchmark
-  Paper: https://eprint.iacr.org/2026/1824.pdf
+  ePrint: https://eprint.iacr.org/2026/1824.pdf
+  DOI: https://doi.org/10.1145/3847192.3847376
 ---

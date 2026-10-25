@@ -20,5 +20,5 @@ authors:
   - Silvio Ranise
 links:
   Code: https://github.com/aleph-fbk/selective-disclosure-benchmark
-  Paper: https://www.sciencedirect.com/science/article/pii/S2214212624000929
+  DOI: https://www.sciencedirect.com/science/article/pii/S2214212624000929
 ---
