@@ -22,7 +22,7 @@ linkedin: mscuro
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Cryptology_(album)" target="_blank">cryptographer</a> is a specific type of researcher who studies 
+    A cryptographer is a specific type of researcher who studies 
     how to secure communication from third parties, such as governments or future maintainers.
   </p>
   <p>
@@ -39,11 +39,11 @@ portrait_caption: >-
 education:
 - name: University of Trento
   logo: /assets/images/badges/Unitn.png
-  position: Master in Cryptography and Coding Theory 
+  position: Master in Mathematics - Cryptography and Coding Theory 
   date: Sep. 2020 - Mar. 2024
 - name: University of Padua
   logo: /assets/images/badges/Unipd.png
-  position: B.S. in Computer Science
+  position: B.S. in Mathematics
   date: Sep. 2016 - Jul. 2020
 
 experience:
