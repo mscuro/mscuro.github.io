@@ -1,0 +1,52 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Daily, to refresh Semantic Scholar citation counts
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+      - name: Fetch citation counts
+        # If Semantic Scholar is unavailable, build anyway with the previous counts
+        continue-on-error: true
+        run: python3 scripts/update_citations.py
+        env:
+          # Counts from the live site, kept for papers the API does not return
+          PREVIOUS_CITATIONS_URL: https://mscuro.github.io/citations.json
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -19,5 +19,5 @@ authors:
   - Alessandro Tomasi
 links:
   # Code: https://github.com/aleph-fbk/selective-disclosure-benchmark
-  DOI: https://www.semanticscholar.org/paper/Comparison-of-Credential-Status-Mechanisms-for-the-Germenia-Manfredi/336730f7ae12497c178ddf21ca56824d2a911f08
+  DOI: https://www.scitepress.org/Papers/2025/136355/136355.pdf
 ---

@@ -30,6 +30,7 @@ let showSemanticScholarCitationCount = () => {
         const cachedData = localStorage.getItem(cacheKey);
         if (cachedData) {
             const { citationCount } = JSON.parse(cachedData);
+            if (citationCount == null) return;
             const elements = document.querySelectorAll(`[data-semantic-scholar-id="${id}"]`);
             elements.forEach(element => {
                 element.innerHTML = `<a class="badge badge-pill badge-publication badge-info" href="https://www.semanticscholar.org/paper/${id}" target="_blank"><i class="ai ai-semantic-scholar"></i> ${parseInt(citationCount).toLocaleString()} citations</a>`;
@@ -45,13 +46,15 @@ if (uncachedSemanticScholarIds.length > 0) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            ids: Array.from(semanticScholarIds)
+            ids: uncachedSemanticScholarIds
         })
     }).then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
     }).then(data => {
         data.forEach(paper => {
-            console.log(paper);
+            // The API returns null for IDs it cannot resolve
+            if (!paper) return;
             // Cache citation count data
             const cacheKey = `semanticScholarCitationCount:${paper.paperId}`;
             const cacheData = {
